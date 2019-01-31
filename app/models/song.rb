@@ -1,3 +1,4 @@
 class Song < ApplicationRecord
-  has_one :user
+  belongs_to :user
+  validates :artist, :album, :name, :rating, :user, presence: true
 end
