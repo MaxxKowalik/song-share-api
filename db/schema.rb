@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 2019_01_31_203835) do
   end
 
   create_table "songs", force: :cascade do |t|
+    t.string "name", null: false
     t.string "artist", null: false
     t.string "album", null: false
     t.integer "rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_songs_on_user_id"
   end
