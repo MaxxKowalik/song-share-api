@@ -1,4 +1,4 @@
-class SongsController < OpenReadController
+class SongsController < ProtectedController
   before_action :set_song, only: [:show, :update, :destroy]
 
   # GET /songs
